@@ -1,0 +1,52 @@
+html, body {
+    width: 100%;
+    min-height: 100vh; /* Гарантируем, что body может расти, если контента больше, чем экран */
+    position: relative;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Отключаем горизонтальный скролл */
+    overflow-y: auto;
+}
+
+/* Контейнер для снежинки – отвечает за падение */
+.snowflake-container {
+    position: absolute;
+    top: -20px; /* стартуем чуть выше экрана */
+    pointer-events: none; /* чтобы не мешали кликам */
+    animation: fall linear forwards;
+}
+
+/* Анимация вертикального падения */
+@keyframes fall {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+/* Сам элемент снежинки – отвечает за покачивание */
+.snowflake {
+    display: block;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    animation: sway ease-in-out infinite;
+}
+
+/* Анимация горизонтального покачивания */
+@keyframes sway {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(15px);
+    }
+}

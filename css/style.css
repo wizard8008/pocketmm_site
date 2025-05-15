@@ -1,0 +1,304 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+    user-select: none;
+}
+
+img {
+    width: 100px;
+    height: auto;
+}
+
+p{
+    font-size: smaller;
+    color: #6e6e6e;
+}
+h1 {
+    font-size: 2.5rem;
+    color: #fffbf5;
+}
+h6 {
+    margin-left: 2rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: medium;
+    font-weight: 400;
+}
+.download-button {
+    display: inline-block;
+    background-color: #ff6868;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+.download-button:hover {
+    background-color: #ff2b2b;
+
+}
+.small-link {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #ff6868;
+    text-decoration: none;
+}
+.small-link:hover {
+    text-decoration: underline;
+}
+
+.footer-index {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffdfdf;
+    color: rgb(0, 0, 0);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100000; /* Поверх всего */
+}
+
+.theme-switch {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+.theme-switch label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.theme-switch input {
+    display: none;
+}
+.slider {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: inline-block;
+    margin-left: 10px;
+}
+.slider::before {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    border-radius: 50%;
+    top: 1px;
+    left: 2px;
+    transition: transform 0.3s;
+}
+input:checked + .slider {
+    background-color: #ff6868;
+}
+input:checked + .slider::before {
+    transform: translateX(20px);
+}
+
+/* Дополнительные стили для иконок */
+.theme-switch .icon {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+.theme-switch .sun {
+    margin-right: 5 px;
+}
+.theme-switch .moon {
+    margin-left: 10px;
+}
+
+
+.social-links {
+    display: flex;
+    font-size: 1.5rem;
+    gap: 15px; /* Отступ между иконками */
+    margin-left: 2rem; /* Отправляет блок с соцсетями вправо */
+    padding-right: 2rem; /* Отступ справа от края */
+}
+
+.social-links a {
+    color: #000000; /* Цвет иконок и текста */
+    text-decoration: none;
+    transition: color 0.3s; /* Плавный переход цвета при наведении */
+}
+
+.social-links a:hover {
+    color: #ff9494; /* Цвет при наведении */
+}
+
+.social-links i {
+    margin-right: 5px; /* Отступ между иконкой и текстом */
+}
+
+.outlined-text {
+    /*-webkit-text-stroke: 1px black; */
+    display: inline-block; /* Исправляет наложение */
+    background-color: #141b26; /* Полупрозрачный черный */
+    padding: 5px 10px; /* Добавляем отступы, чтобы фон был шире текста */
+    border-radius: 5px;
+    margin: 10px;
+  }
+
+  .text-back {
+    color: #000000;
+    font-style: italic;
+    font-size: 1em; /* По умолчанию для мобильных устройств */
+    font-weight: 400;
+    text-decoration: none;
+    display: inline-block;
+    background-color: #ffdfdf;
+    border: 1px solid #fecdcd;
+    padding: 10px 10px;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+/* Медиазапрос для экранов шире 768px (планшеты и компьютеры) */
+@media (min-width: 768px) {
+    .text-back {
+        font-size: 1.4em; /* Увеличиваем размер шрифта для больших экранов */
+    }
+}
+  
+/* About&Patches */
+
+.patch-message {
+    position: relative; /* Создает контекст для absolute */
+    color: rgb(0, 0, 0);
+    font-size: 1.2em; /* По умолчанию для мобильных устройств */
+    background-color: #dffffc;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid #007c6f;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: left;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Плавное изменение цвета */
+    user-select: none;
+}
+
+/* Медиазапрос для экранов шире 768px (планшеты и компьютеры) */
+@media (min-width: 768px) {
+    .patch-message {
+        font-size: 1.4em; /* Увеличиваем размер шрифта для больших экранов */
+    }
+}
+
+.patch-message:hover {
+    background-color: #ffdfdf; /* Новый цвет фона при наведении */
+    color: #000; /* Если хочешь менять цвет текста, можно указать другой */
+}
+
+.div-patch {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Отступ между элементами */
+    width: 80%; /* Задаем ширину, чтобы элементы не растягивались */
+    max-width: 1000px; /* Ограничиваем максимальную ширину */
+}   
+
+
+/* FEATURES LIST */
+.date {
+    position: absolute;
+    top: 10px;
+    right: 10px; /* Прижимаем к правому краю */
+    background: #ffdfdf;
+    padding: 0.2em 0.5em;
+    border-radius: 3px;
+    font-size: 0.9em;
+    color: #000000;
+}
+
+.patch {
+    background: #ffdfdf;
+    padding: 0.2em 0.5em;
+    border-radius: 3px;
+    font-size: 0.9em;
+    color: #000000;
+}
+
+
+/*LIST */
+.rectangle {
+    counter-reset: li; 
+    list-style: none; 
+    font: 16px "Trebuchet MS", "Lucida Sans";
+    padding: 0%;
+    margin-right: 2em;
+    margin-left: 2em;
+    user-select: none;
+    }
+
+    /* Медиазапрос для экранов шире 768px (планшеты и компьютеры) */
+    @media (min-width: 768px) {
+        .rectangle {
+            font-size: 1.2em; /* Увеличиваем размер шрифта для больших экранов */
+            }   
+    }
+    .rectangle a {
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em .8em;
+    margin: .5em 0 .5em 2.5em;
+    background: #ffdfdf;
+    border: 1px solid #fecdcd;
+    color: #000;
+    text-decoration: none;
+    transition: all .3s ease-out;
+    }
+    .rectangle a:before {
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -2.5em;
+    top: 50%;
+    margin-top: -1em;
+    background: #ffdfdf;
+    border: 1px solid #fecdcd;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    text-align: center;
+    font-weight: bold;
+    }
+    .rectangle a:after {
+    position: absolute;
+    content: "";
+    border: .5em solid transparent;
+    left: -1em;
+    top: 50%;
+    margin-top: -.5em;
+    transition: all .3s ease-out;
+    }
+    .rectangle a:hover:after {
+    left: -.5em;
+    border-left-color: #ffdfdf;
+    }
+
+    .switch-container {
+        display: flex;
+        gap: 5px; /* Отступ между свитчами */
+        align-items: center; /* Выровнять по вертикали */
+    }
