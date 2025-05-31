@@ -43,7 +43,7 @@
                 Keep track of all your financial operations and enjoy
             </a>
         </p>
-        <p>Hit the text to get back</p>
+        <p style="color: #fff;">Hit the text to get back</p>
     </div>
         
     <div class="div-patch">

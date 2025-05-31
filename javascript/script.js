@@ -2,7 +2,8 @@ const toggle = document.getElementById('theme-toggle');
 
 function setTheme(isDark) {
     if (isDark) {
-        document.body.style.background = 'radial-gradient(ellipse at bottom,rgb(0, 0, 0) 0%,rgb(37, 37, 37) 100%)';
+         document.body.style.background = 'radial-gradient(ellipse at bottom,rgb(37, 37, 37) 0%,rgb(0, 0, 0) 100%)';
+        //document.body.style.background = 'radial-gradient(circle at center,rgb(110, 110, 110), #000000)';
         document.body.style.color = '#fffbf5';
     } else {
         document.body.style.background = '#fffbf5';
