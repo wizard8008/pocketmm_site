@@ -2,7 +2,7 @@ const toggle = document.getElementById('theme-toggle');
 
 function setTheme(isDark) {
     if (isDark) {
-        document.body.style.background = 'radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)';
+        document.body.style.background = 'radial-gradient(ellipse at bottom,rgb(0, 0, 0) 0%,rgb(37, 37, 37) 100%)';
         document.body.style.color = '#fffbf5';
     } else {
         document.body.style.background = '#fffbf5';

@@ -23,7 +23,7 @@
         footer {
             width: 100%;
             padding: 10px;
-            background-color: #ffdfdf;
+            background-color: #6e6e6e;
             color: rgb(0, 0, 0);
             bottom: 0;
             display: flex;
@@ -45,42 +45,31 @@
         </p>
         <p>Hit the text to get back</p>
     </div>
-    
-    <div>
-        <p>Available Functions</p>
-        <ol class="rectangle">   
-            <li><a>. . . . . Total balance . . . . .</a></li>
-            <li><a>Logs</a></li>
-            <li><a>Soon</a></li>   
-            <li><a>Soon</a></li>   
-            <li><a>Soon</a></li> 
-         </ol>
-    </div>
-    
+        
     <div class="div-patch">
-        <p>Patches</p>
+        <h1>PATCHES</h1>
 
         <div class="patch-message" style="margin-top: 0;">
-            <p><span class="patch">Patch 1</span><span class="date">00.00.00 - 00.00.00</span></p>
+            <p><span class="patch">Release</span><span class="date">Today</span></p>
             <p>Last night I dreamt of San Pedro<br>Just like I'd never gone, I knew the song<br>A young girl with eyes like the desert<br>It all seems like yesterday, not far away</p>
         </div>
 
         <div class="patch-message" style="margin-top: 0;">
-            <p><span class="patch">Patch 2</span><span class="date">00.00.00 - 00.00.00</span></p>
+            <p><span class="patch">Patch 1</span><span class="date">00.00.00</span></p>
             <p>Tropical the island breeze<br>All of nature wild and free<br>This is where I long to be<br>La isla bonita
                 <br>And when the samba played<br>The sun would set so high<br>Ring through my ears and sting my eyes<br>Your Spanish lullaby</p>
         </div>
 
         <div class="patch-message" style="margin-top: 0;">
-            <p><span class="patch">Patch 3</span><span class="date">00.00.00 - 00.00.00</span></p>
+            <p><span class="patch">Patch 2</span><span class="date">xx.xx.xx</span></p>
         </div>
 
         <div class="patch-message" style="margin-top: 0;">
-            <p><span class="patch">Patch 4</span><span class="date">00.00.00 - 00.00.00</span></p>
+            <p><span class="patch">Patch 3</span><span class="date">xx.xx.xx</span></p>
         </div>
 
         <div class="patch-message" style="margin-top: 0; margin-bottom: 5rem;">
-            <p><span class="patch">Patch 5</span><span class="date">00.00.00 - 00.00.00</span></p>
+            <p><span class="patch">Patch 4</span><span class="date">xx.xx.xx</span></p>
         </div>
     </div>
 
