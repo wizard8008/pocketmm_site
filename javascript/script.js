@@ -2,34 +2,33 @@ const toggle = document.getElementById('theme-toggle');
 
 function setTheme(isDark) {
     if (isDark) {
-         document.body.style.background = 'radial-gradient(ellipse at bottom,rgb(37, 37, 37) 0%,rgb(0, 0, 0) 100%)';
-        //document.body.style.background = 'radial-gradient(circle at center,rgb(110, 110, 110), #000000)';
+        document.body.style.background = '#2a2932';
         document.body.style.color = '#fffbf5';
+        document.body.classList.add('dark-theme');
+        document.body.classList.remove('light-theme');
     } else {
         document.body.style.background = '#fffbf5';
         document.body.style.color = '#000';
+        document.body.classList.add('light-theme');
+        document.body.classList.remove('dark-theme');
     }
-    toggle.checked = isDark;
+
+    if (toggle) {
+        toggle.checked = isDark;
+    }
 }
 
-// Проверяем, сохранено ли предпочтение темы в localStorage
 const savedTheme = localStorage.getItem('theme');
+setTheme(savedTheme ? savedTheme === 'dark' : true);
 
-// Если предпочтение есть, применяем его, иначе по умолчанию тёмная тема
-if (savedTheme) {
-    setTheme(savedTheme === 'dark');
-} else {
-    setTheme(true);
+if (toggle) {
+    toggle.addEventListener('change', () => {
+        const isDark = toggle.checked;
+        setTheme(isDark);
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
 }
 
-toggle.addEventListener('change', () => {
-    const isDark = toggle.checked;
-    setTheme(isDark);
-    // Сохраняем выбранную тему: 'dark' или 'light'
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-});
-
-// SNOW //
 
 // SNOW //
 
@@ -52,8 +51,8 @@ function createSnowflake() {
     // Задаем случайные параметры
     const size = Math.random() * 8 + 4; // размер от 4px до 12px
     const leftPosition = Math.random() * window.innerWidth;
-    const fallDuration = Math.random() * 20 + 10; // длительность падения от 5 до 13 секунд
-    const swayDuration = Math.random() * 8 + 5; // длительность покачивания от 2 до 5 секунд
+    const fallDuration = Math.random() * 30 + 20; // длительность падения от 20 до 50 секунд
+    const swayDuration = Math.random() * 8 + 5; // длительность покачивания от 5 до 13 секунд
 
     // Применяем стили
     container.style.left = leftPosition + "px";
@@ -71,8 +70,8 @@ function createSnowflake() {
     }, fallDuration * 1000);
 }
 
-// Запускаем генерацию снежинок каждые 150 мс
-let snowInterval = setInterval(createSnowflake, 150);
+// Запускаем генерацию снежинок каждые 500 мс
+let snowInterval = setInterval(createSnowflake, 500);
 
 // SNOW TOGGLE //
 
@@ -88,7 +87,7 @@ document.getElementById('snow-toggle-input').addEventListener('change', function
     if (!snowActive) {
         clearInterval(snowInterval); // Останавливаем создание новых снежинок
     } else {
-        snowInterval = setInterval(createSnowflake, 150); // Включаем снова генерацию снежинок
+        snowInterval = setInterval(createSnowflake, 500); // Включаем снова генерацию снежинок
     }
 });
 

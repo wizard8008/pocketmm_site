@@ -19,23 +19,23 @@ img {
 
 p{
     font-size: smaller;
-    color: #696969;
+    color: #3d3d3d;
 }
 
 h1 {
     font-size: 2.5rem;
     color: #fff;
-    font-family: "Roboto", "Arial", sans-serif;
-    background-color: #0b0b0b; /* Полупрозрачный черный */
-    padding: 5px 10px; /* Добавляем отступы, чтобы фон был шире текста */
+    font-family: 'Roboto', sans-serif;
+    padding: 5px 10px;
     border-radius: 5px;
+    letter-spacing: 10px;
 }
 
 h6 {
-    margin-left: 2rem;
+    margin-left: 1rem;
     margin-top: 0;
     margin-bottom: 0;
-    font-size: medium;
+    font-size: small;
     font-weight: 400;
 }
 .download-button {
@@ -66,7 +66,7 @@ h6 {
 .footer-index {
     width: 100%;
     padding: 10px;
-    background-color: #6e6e6e;
+    background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     position: fixed;
     bottom: 0;
@@ -75,6 +75,7 @@ h6 {
     justify-content: space-between;
     align-items: center;
     z-index: 100000; /* Поверх всего */
+    border: 1px solid #131313;
 }
 
 .theme-switch {
@@ -125,12 +126,6 @@ input:checked + .slider::before {
     display: flex;
     align-items: center;
 }
-.theme-switch .sun {
-    margin-right: 5 px;
-}
-.theme-switch .moon {
-    margin-left: 10px;
-}
 
 
 .social-links {
@@ -142,7 +137,7 @@ input:checked + .slider::before {
 }
 
 .social-links a {
-    color: #000; /* Цвет иконок и текста */
+    color: #000000; /* Цвет иконок и текста */
     text-decoration: none;
     transition: color 0.3s; /* Плавный переход цвета при наведении */
 }
@@ -155,14 +150,22 @@ input:checked + .slider::before {
     margin-right: 5px; /* Отступ между иконкой и текстом */
 }
 
+/* Title style and color */
 .outlined-text {
-    /*-webkit-text-stroke: 1px black; */
-    display: inline-block; /* Исправляет наложение */
-    background-color: #0c0c0c; /* Полупрозрачный черный */
     padding: 5px 10px; /* Добавляем отступы, чтобы фон был шире текста */
     border-radius: 5px;
     margin: 10px;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 10px;
   }
+
+    body.dark-theme .outlined-text {
+    color: #ffffff;
+    }
+
+    body.light-theme .outlined-text {
+        color: #2a2932;
+    }
 
   .text-back {
     color: #000000;
@@ -211,8 +214,7 @@ input:checked + .slider::before {
 }
 
 .patch-message:hover {
-    background-color: #000; /* Новый цвет фона при наведении */
-    color: #000; /* Если хочешь менять цвет текста, можно указать другой */
+    background-color: rgb(255, 255, 255); /* Новый цвет фона при наведении */
 }
 
 .div-patch {
@@ -223,8 +225,6 @@ input:checked + .slider::before {
     max-width: 1000px; /* Ограничиваем максимальную ширину */
 }   
 
-
-/* FEATURES LIST */
 .date {
     position: absolute;
     top: 10px;
